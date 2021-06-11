@@ -1,0 +1,15 @@
+<Context>
+    <Resource name="BeanManager"
+              auth="Container"
+              type="javax.enterprise.inject.spi.BeanManager"
+              factory="org.jboss.weld.resources.ManagerObjectFactory"/>
+
+    <Resource name="jdbc/postgres" auth="Container" type="javax.sql.DataSource"
+              username="postgres"
+              password="qwerty"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://security:5433/spring_security_app"
+              maxTotal="25"
+              maxIdle="10"
+              validationQuery="select 1" />
+</Context>
